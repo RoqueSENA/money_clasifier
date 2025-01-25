@@ -28,7 +28,7 @@ if uploaded_file is not None:
     st.image("temp.jpg", caption="Uploaded Image", use_container_width=True)
 
     # Load model
-    model = keras.models.load_model("Money_Clasifier\cnn_modelo_denominaciones.keras")
+    model = keras.models.load_model("cnn_modelo_denominaciones.keras")
     img = keras.preprocessing.image.load_img("temp.jpg", target_size=(250, 120))
     img_array = keras.preprocessing.image.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0) # Create a batch
